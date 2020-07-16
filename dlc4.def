@@ -1,0 +1,24 @@
+Bootstrap: docker 
+From: rbpatt2019/docker4deeplabcut2
+
+%setup
+	echo 'checking what files are available in working direcvtory'
+
+%files
+	/home/john/Desktop/DLC_SOP/Run-DLC.py
+	#^put in OS location
+
+%runscript
+	python3 Run-DLC.py   #also checks files available/act's for this as it arises
+	#would you like to input DLC cmds manually or assisted?
+		#if manually: 	
+
+%help
+	echo 'helping'
+
+%labels
+	Author John Logue
+
+%test
+	echo 'testing'	
+	
